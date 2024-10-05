@@ -12,9 +12,9 @@ import (
 func TestAllowedTxsParse(t *testing.T) {
 	testData := []byte(`
 		0x7A6Ed0a905053A21C15cB5b4F39b561B6A3FE50f->0x855Ac656956AF761439f4a451c872E812E3900a4:0x
-		0x7A6Ed0a905053A21C15cB5b4F39b561B6A3FE50f->one1np293efrmv74xyjcz0kk3sn53x0fm745f2hsuc:0xa9059cbb
-		one1s4dvv454dtmkzsulffz3epewsyhrjq9y0g3fqz->0x985458E523dB3d53125813eD68c274899e9DfAb4:0xa9059cbb
-		one1s4dvv454dtmkzsulffz3epewsyhrjq9y0g3fqz->one10fhdp2g9q5azrs2ukk608x6krd4rleg0ueskug:0x
+		0x7A6Ed0a905053A21C15cB5b4F39b561B6A3FE50f->itc1np293efrmv74xyjcz0kk3sn53x0fm745f2hsuc:0xa9059cbb
+		itc1s4dvv454dtmkzsulffz3epewsyhrjq9y0g3fqz->0x985458E523dB3d53125813eD68c274899e9DfAb4:0xa9059cbb
+		itc1s4dvv454dtmkzsulffz3epewsyhrjq9y0g3fqz->itc10fhdp2g9q5azrs2ukk608x6krd4rleg0ueskug:0x
 	`)
 	expected := map[ethCommon.Address][]core.AllowedTxData{
 		common.HexToAddress("0x7A6Ed0a905053A21C15cB5b4F39b561B6A3FE50f"): {

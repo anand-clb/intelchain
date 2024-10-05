@@ -34,11 +34,11 @@ func TestIsBech32Address(t *testing.T) {
 	}{
 		{"itc1ay37rp2pc3kjarg7a322vu3sa8j9puahg679z3", true},
 		{"itc1fdv7u7rll9epgcqv9xxh9lhwq427nsqldp8ua9", true},
-		{"tone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", true},
-		{"tone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca1", false},
-		{"xone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
+		{"titc1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", true},
+		{"titc1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca1", false},
+		{"xitc1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
 		{"ne1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
-		{"1one1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
+		{"1itc1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
 		{"one2fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
 	}
 
@@ -157,7 +157,7 @@ func TestParseAddr(t *testing.T) {
 		t.Errorf("error on ParseAddr")
 	}
 	// Parsing incorrect address
-	adr3, _ := ParseAddr("helloworldone1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ufdfsrfasdfadfas")
+	adr3, _ := ParseAddr("helloworlditc1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ufdfsrfasdfadfas")
 	if adr3.Hex() != "0x0000000000000000000000000000000000000000" {
 		t.Errorf("error on ParseAddr")
 	}

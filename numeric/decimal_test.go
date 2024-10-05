@@ -101,7 +101,7 @@ func TestDecString(t *testing.T) {
 	}{
 		{NewDec(0), "0"},
 		{NewDec(1), "1"},
-		{NewDec(10), "10"},
+		{NewDec(10), "10"}, 
 		{NewDec(12340), "12340"},
 		{NewDecWithPrec(12340, 4), "1.234"},
 		{NewDecWithPrec(12340, 5), "0.1234"},
@@ -299,7 +299,7 @@ func TestDecMarshalJSON(t *testing.T) {
 		wantErr bool // if wantErr = false, will also attempt unmarshaling
 	}{
 		{"zero", decimal(0), "\"0\"", false},
-		{"one", decimal(1), "\"0.000000000000000001\"", false},
+		{"itc", decimal(1), "\"0.000000000000000001\"", false},
 		{"ten", decimal(10), "\"0.00000000000000001\"", false},
 		{"12340", decimal(12340), "\"0.00000000000001234\"", false},
 		{"zeroInt", NewDec(0), "\"0\"", false},

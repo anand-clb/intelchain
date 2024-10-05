@@ -13,8 +13,8 @@ import (
 )
 
 var (
-	testAddr1Str  = "one1upj2dzv5ayuqy5x0aclgcr32chqfy32glsdusk"
-	testAddr2Str  = "one1k860e6h0sen6ap5fymzwpqtmqlkut2fcus840l"
+	testAddr1Str  = "itc1upj2dzv5ayuqy5x0aclgcr32chqfy32glsdusk"
+	testAddr2Str  = "itc1k860e6h0sen6ap5fymzwpqtmqlkut2fcus840l"
 	testAddr1JStr = fmt.Sprintf(`"%v"`, testAddr1Str)
 	testAddr2JStr = fmt.Sprintf(`"%v"`, testAddr2Str)
 
@@ -75,8 +75,8 @@ func checkAddressOrListEqual(a, b *AddressOrList) error {
 
 func TestDelegation_IntoStructuredResponse(t *testing.T) {
 	d := Delegation{
-		ValidatorAddress: "one1hwe68yprkhp5sqq5u7sm9uqu8jxz87fd7ffex7",
-		DelegatorAddress: "one1c5yja54ksccgmn4njz5w4cqyjwhqatlly7gkm3",
+		ValidatorAddress: "itc1hwe68yprkhp5sqq5u7sm9uqu8jxz87fd7ffex7",
+		DelegatorAddress: "itc1c5yja54ksccgmn4njz5w4cqyjwhqatlly7gkm3",
 		Amount:           big.NewInt(1000),
 		Reward:           big.NewInt(1014),
 		Undelegations:    make([]Undelegation, 0),

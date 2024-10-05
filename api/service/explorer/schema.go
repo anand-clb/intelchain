@@ -18,7 +18,7 @@ const (
 	CheckpointBitmap = "checkpoint_bitmap"
 	TracePrefix      = "tr_"
 
-	oneAddrByteLen = 42 // byte size of string "one1..."
+	oneAddrByteLen = 42 // byte size of string "itc1..."
 )
 
 // readCheckpointBitmap read explorer checkpoint bitmap from storage

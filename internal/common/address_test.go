@@ -32,8 +32,8 @@ func TestIsBech32Address(t *testing.T) {
 		str string
 		exp bool
 	}{
-		{"one1ay37rp2pc3kjarg7a322vu3sa8j9puahg679z3", true},
-		{"one1fdv7u7rll9epgcqv9xxh9lhwq427nsqldp8ua9", true},
+		{"itc1ay37rp2pc3kjarg7a322vu3sa8j9puahg679z3", true},
+		{"itc1fdv7u7rll9epgcqv9xxh9lhwq427nsqldp8ua9", true},
 		{"tone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", true},
 		{"tone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca1", false},
 		{"xone1fdv7u7rll9epgcqv9xxh9lhwq427nsqlr5wca5", false},
@@ -144,7 +144,7 @@ func BenchmarkAddressBech32(b *testing.B) {
 func TestAddressToBech32(t *testing.T) {
 	adr := ethCommon.HexToAddress("0x15a128e599b74842bccba860311efa92991bffb5")
 	if address, err := AddressToBech32(adr); err == nil {
-		if address != "one1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ur" {
+		if address != "itc1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ur" {
 			t.Errorf("error on parseAddr")
 		}
 	}
@@ -152,7 +152,7 @@ func TestAddressToBech32(t *testing.T) {
 
 func TestParseAddr(t *testing.T) {
 	adr := ethCommon.HexToAddress("0x15a128e599b74842bccba860311efa92991bffb5")
-	adr2, _ := ParseAddr("one1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ur")
+	adr2, _ := ParseAddr("itc1zksj3evekayy90xt4psrz8h6j2v3hla4qwz4ur")
 	if adr.Hex() != adr2.Hex() {
 		t.Errorf("error on ParseAddr")
 	}
